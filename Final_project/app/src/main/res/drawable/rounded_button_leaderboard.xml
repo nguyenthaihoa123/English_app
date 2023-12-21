@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"> <!-- Change the click event you need -->
+        <shape android:shape="rectangle">
+            <solid android:color="#1AFFFFFF" /> <!-- Define the pressed color -->
+            <corners android:radius="30dp" /> <!-- Adjust the radius as per your requirement -->
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+<!--            <solid android:color="#1AFFFFFF" /> &lt;!&ndash; Define the default color &ndash;&gt;-->
+            <corners android:radius="30dp" /> <!-- Adjust the radius as per your requirement -->
+        </shape>
+    </item>
+</selector>

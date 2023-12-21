@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="20dp"
+    android:layout_gravity="center_horizontal"
+    app:cardPreventCornerOverlap="false"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sai rồi! Đáp án là: "
+                android:textStyle="bold"
+                android:textSize="23sp"
+                android:textColor="#F35764" />
+            <TextView
+                android:id="@+id/txtKeyAnsFill"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="23sp"
+                android:textColor="#F43343" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:backgroundTint="#F35764"
+            android:background="@drawable/rounded_button2"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:text="Tiếp tục" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

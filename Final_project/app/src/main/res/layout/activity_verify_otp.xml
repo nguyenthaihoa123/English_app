@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#006D74"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="@dimen/_70sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="wrap_content"
+            android:text="Nhập email để được được đổi lại mật khẩu thông qua email"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+        <!--Edittext for getting users phone number-->
+        <EditText
+            android:paddingBottom="@dimen/_20sdp"
+            android:layout_marginTop="50dp"
+            android:id="@+id/idEdtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/white"
+            android:hint="Enter your email"
+            android:singleLine="true"
+            android:importantForAutofill="no" />
+
+        <!--Button for getting OTP-->
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/idBtnSend"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/idEdtEmail"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Send"
+            android:textColor="@color/white"
+            android:backgroundTint="#003C39"
+            android:background="@drawable/round_btn_sendmail"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

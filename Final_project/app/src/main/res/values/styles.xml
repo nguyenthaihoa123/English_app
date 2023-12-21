@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize the color and size of text in the bottom navigation view -->
+    </style>
+
+    <style name="BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="itemTextAppearanceActive">@style/BottomNavigationView.ActiveText</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationView.InactiveText</item>
+    </style>
+
+    <style name="BottomNavigationView.ActiveText">
+        <item name="android:textSize">12sp</item> <!-- Điều chỉnh kích thước chữ ở đây -->
+        <item name="android:textColor">@color/bottom_nav_active_color</item> <!-- Điều chỉnh màu chữ ở đây -->
+    </style>
+
+    <style name="BottomNavigationView.InactiveText">
+        <item name="android:textSize">12sp</item> <!-- Điều chỉnh kích thước chữ ở đây -->
+        <item name="android:textColor">@color/black</item> <!-- Điều chỉnh màu chữ ở đây -->
+    </style>
+    <style name="CustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/rounded_progress_bar</item>
+        <item name="android:minHeight">10dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+    <style name="CustomProgressBarLoading" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/rounded_progress_bar_loading</item>
+        <item name="android:minHeight">10dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

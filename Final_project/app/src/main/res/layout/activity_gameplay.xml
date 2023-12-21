@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#183C3E">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_marginStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="Hello Elephant"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.521"/>
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="Here some of the games you can find help to improve your knowledge"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <ImageButton
+            android:id="@+id/btnLeaderBoard"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/rank_figma"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/header"
+            app:layout_constraintVertical_bias="0.6"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/quizz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_quizz"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <ImageView
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_130sdp"
+                android:src="@drawable/quizz_game"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cardView_quizz"
+                />
+            <TextView
+                android:paddingBottom="@dimen/_2sdp"
+                android:id="@+id/numberOfQuizz"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="290dp"
+                android:background="@drawable/border_game_play"
+                android:backgroundTint="#004643"
+                android:gravity="center"
+                android:text=" 01/30 "
+                android:textColor="@color/white" />
+
+            <ImageButton
+                android:id="@+id/btnDeafault_Quizz"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="230dp"
+                android:background="@drawable/rounded_imageview"
+                android:backgroundTint="#EECA14"
+                android:src="@drawable/book_04"
+                />
+
+            <ImageButton
+                android:id="@+id/btnRandom_Quizz"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="290dp"
+                android:background="@drawable/rounded_imageview"
+                android:backgroundTint="#80B84C"
+                android:src="@drawable/coins_rotate"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_Play"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:textSize="20dp"
+            android:layout_marginTop="7dp"
+            android:clickable="false"
+            android:background="@drawable/rounded_button_leaderboard"
+            android:backgroundTint="#296793"
+            android:text="QUIZ"
+
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.9"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fillword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/flashcard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_fillword"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_130sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/word_fill_game"
+                />
+
+            <TextView
+                android:paddingBottom="@dimen/_2sdp"
+                android:id="@+id/numberOfFillWord"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="290dp"
+                android:background="@drawable/border_game_play"
+                android:backgroundTint="#004643"
+                android:gravity="center"
+                android:text=" 01/30 "
+                android:textColor="@color/white" />
+            <ImageButton
+                android:id="@+id/btnDeafault_fillWord"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="230dp"
+                android:background="@drawable/rounded_imageview"
+                android:backgroundTint="#B33235"
+                android:src="@drawable/book_04"
+                />
+
+            <ImageButton
+                android:id="@+id/btnRandom_fillWord"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="290dp"
+                android:background="@drawable/rounded_imageview"
+                android:backgroundTint="#DFCE92"
+                android:src="@drawable/coins_rotate"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_Play_fillWord"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:textSize="20dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/rounded_button_leaderboard"
+            android:backgroundTint="#3E6F72"
+            android:text="FILL WORD"
+            android:clickable="false"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.9"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/flashcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/quizz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_flashcard"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/flashcard_game"
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_130sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/flascard_game"
+                />
+
+            <TextView
+                android:paddingBottom="@dimen/_2sdp"
+                android:id="@+id/numberOfFlashCard"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="290dp"
+                android:background="@drawable/border_game_play"
+                android:backgroundTint="#004643"
+                android:gravity="center"
+                android:text=" 01/30 "
+                android:textColor="@color/white" />
+            <ImageButton
+                android:id="@+id/btnDeafault_flashCard"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="230dp"
+                android:background="@drawable/rounded_imageview"
+                android:backgroundTint="#FABA59"
+                android:src="@drawable/book_04"
+                />
+
+            <ImageButton
+                android:id="@+id/btnRandom_flashCard"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="290dp"
+                android:background="@drawable/rounded_imageview"
+                android:backgroundTint="#1F4C85"
+                android:src="@drawable/coins_rotate"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_Play_flashcard"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:textSize="20dp"
+            android:clickable="false"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/rounded_button_leaderboard"
+            android:backgroundTint="#B71E16"
+            android:text="FLASHCARD"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.9"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:id="@+id/bottombarGame"
+        app:menu="@menu/bottom_nav"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/BottomNavigationView"
+        app:itemIconTint="@color/bottombar"
+        >
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

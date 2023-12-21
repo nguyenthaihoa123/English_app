@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#EFFEFF"
+    android:layout_height="match_parent"
+    tools:context=".TracNghiem">
+    <LinearLayout
+        android:id="@+id/headerTracNghiem"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rounded_back"
+            android:src="@drawable/baseline_keyboard_backspace_24"/>
+        <TextView
+            android:id="@+id/intro"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TracNghiem"
+            android:textStyle="bold"
+            android:layout_marginRight="60dp"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_line"
+        style="@style/CustomProgressBar"
+        android:layout_width="300dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:progress="40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerTracNghiem" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/questionNumber"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="34/40"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.4"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/progress_line"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.11" />-->
+
+    <FrameLayout
+        android:id="@+id/frameQues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/headerTracNghiem">
+
+        <LinearLayout
+            android:id="@+id/quesTN"
+            android:layout_width="370dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/border_stroke_tn"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/txt_numQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Question 3 of 10"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+            android:id="@+id/txt_Question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A charity that relies exclusively on voluntary contributions"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+
+            >
+
+            <!--progress bar implementation-->
+
+            <!--Text implementation in center of the progress bar-->
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circular_shape"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                android:textAlignment="center"
+                android:progress="50"
+                android:max="10"
+
+                />
+
+            <TextView
+                android:id="@+id/progress_text"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8.5sp"
+                android:layout_marginTop="8sp"
+                android:gravity="center"
+                android:text="60"
+                android:background="@drawable/circular_txt"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frameQues">
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="350dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:background="@drawable/border_stroke_tn"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingLeft="10dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_A"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Hoàn toàn, không bao gồm"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="350dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:background="@drawable/border_stroke_tn"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingLeft="10dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_B"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Hoàn toàn, không bao gồm"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="350dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:background="@drawable/border_stroke_tn"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingLeft="10dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_C"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Hoàn toàn, không bao gồm"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="350dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:background="@drawable/border_stroke_tn"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingLeft="10dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_D"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Hoàn toàn, không bao gồm"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </LinearLayout>-->
+        <RadioGroup
+            android:id="@+id/choicesGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/choice_A"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:text="Choice 1"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="12sp"
+                android:textSize="16sp"
+                android:layoutDirection="rtl"
+                android:button="@drawable/radiobutton_event_tn"
+                android:background="@drawable/border_stroke_tn"
+
+
+                />
+            <RadioButton
+                android:id="@+id/choice_B"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:text="Choice 1"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="12sp"
+                android:textSize="16sp"
+                android:layoutDirection="rtl"
+                android:button="@drawable/radiobutton_event_tn"
+                android:background="@drawable/border_stroke_tn"
+                />
+            <RadioButton
+                android:id="@+id/choice_C"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:text="Choice 1"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="12sp"
+                android:textSize="16sp"
+                android:layoutDirection="rtl"
+                android:button="@drawable/radiobutton_event_tn"
+                android:background="@drawable/border_stroke_tn"
+                />
+            <RadioButton
+                android:id="@+id/choice_D"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:text="Choice 1"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="12sp"
+                android:textSize="16sp"
+                android:layoutDirection="rtl"
+                android:button="@drawable/radiobutton_event_tn"
+                android:background="@drawable/border_stroke_tn"
+                />
+
+        </RadioGroup>
+        <Button
+            android:id="@+id/btn_Submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button2"
+            android:backgroundTint="#006D74"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

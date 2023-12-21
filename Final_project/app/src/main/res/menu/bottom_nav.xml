@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Home"
+        android:id="@+id/homePage"
+        android:icon="@drawable/home_icon"
+        />
+    <item
+        android:title="Game"
+        android:id="@+id/gamePage"
+        android:icon="@drawable/road_finish"
+        />
+    <item
+        android:title="My Word"
+        android:id="@+id/mywordPage"
+        android:icon="@drawable/book"
+        />
+    <item
+        android:title="Folder"
+        android:id="@+id/folderPage"
+        android:icon="@drawable/folder_file_alt"
+        />
+    <item
+        android:title="Profile"
+        android:id="@+id/proPage"
+        android:icon="@drawable/user"
+        />
+</menu>
